@@ -2,7 +2,7 @@
 import {createContext, useEffect, useState} from "react";
 import axios from 'axios';
 
-const URL =" https://65decef4ff5e305f32a08225.mockapi.io/new/";
+const URL ="https://6629186654afcabd073828d7.mockapi.io/new/new/";
 const Context = createContext();
 
 export const ContextProvider= ({ children }) =>{
@@ -69,6 +69,7 @@ export const ContextProvider= ({ children }) =>{
           console.error("Error:", error);
         });
     }, []);
+    console.log(data)
 
     return(
         <Context.Provider  value={{data,name,email,phone,setName,setData,AddtoTable,handleFormSubmit,setEmail,setPhone,handleUpdate,handleDelete}}>
